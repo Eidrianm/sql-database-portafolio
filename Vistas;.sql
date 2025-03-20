@@ -1,6 +1,6 @@
 USE tienda;
 
-create view ventas as select id_usuario, id_producto from compras where fecha >= CURRENT_DATE - INTERVAL 1 MONTH;
+create view ventas as select id_usuario, id_producto, fecha from compras where fecha >= CURRENT_DATE - INTERVAL 1 MONTH;
 
 create view ventas_cliente as select usuarios.nombre_usuario, compras.fecha from compras
 
