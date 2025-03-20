@@ -16,7 +16,7 @@ CREATE TABLE `compras`(
     `id_compra` INT NOT NULL AUTO_INCREMENT, 
     `id_usuario` INT NOT NULL, 
     `id_producto` INT NOT NULL, 
-    `fecha` DEFAULT CURRENT_DATE, 
+    `fecha`  DATE DEFAULT CURRENT_DATE, 
     PRIMARY KEY (`id_compra`), 
     FOREIGN KEY (`id_usuario`) REFERENCES `usuarios`(`id_usuario`) ON DELETE CASCADE , 
     FOREIGN KEY (`id_producto`) REFERENCES `productos`(`id_producto`) ON DELETE CASCADE);
@@ -67,5 +67,6 @@ INSERT INTO `compras` (`id_usuario`, `id_producto`, `fecha`) VALUES
 (8, 9, '2023-08-15'),
 (9, 10, '2023-09-15'),
 (10, 1, '2023-10-15');
+
 
 
